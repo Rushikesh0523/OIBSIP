@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 1rem;
+      display: block;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .result {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.7rem;
+      background-color: #007bff;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Temperature Converter</h2>
+    <label for="degrees">Degrees</label>
+    <input type="number" id="degrees" placeholder="Enter value" required />
+
+    <label for="type">Type</label>
+    <select id="type">
+      <option value="fahrenheit">Fahrenheit</option>
+      <option value="celsius">Celsius</option>
+      <option value="kelvin">Kelvin</option>
+    </select>
+
+    <div class="result" id="result">Result: --</div>
+
+    <button onclick="convertTemperature()">Convert</button>
+  </div>
+
+  <script>
+    function convertTemperature() {
+      const degrees = parseFloat(document.getElementById('degrees').value);
+      const type = document.getElementById('type').value;
+      const resultElement = document.getElementById('result');
+
+      if (isNaN(degrees)) {
+        resultElement.textContent = 'Please enter a valid number';
+        return;
+      }
+
+      let result;
+
+      switch (type) {
+        case 'fahrenheit':
+          result = ((degrees - 32) * 5 / 9).toFixed(4) + ' °C';
+          break;
+        case 'celsius':
+          result = ((degrees * 9 / 5) + 32).toFixed(4) + ' °F';
+          break;
+        case 'kelvin':
+          result = (degrees - 273.15).toFixed(4) + ' °C';
+          break;
+        default:
+          result = 'Invalid type';
+      }
+
+      resultElement.textContent = 'Result: ' + result;
+    }
+  </script>
+</body>
+
+</html>
