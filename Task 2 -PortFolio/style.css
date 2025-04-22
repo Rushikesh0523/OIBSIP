@@ -1,0 +1,361 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: #f7f8fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 1rem 2rem;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure the navbar stays on top of other elements */
+}
+
+/* Adjust navbar logo and links */
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00adb5;
+}
+
+/* Button styling */
+.btn {
+    padding: 0.5rem 1rem;
+    background: #00adb5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #008b95;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('Photo2.jpg'); /* Add your image here */
+    background-size: cover;
+    background-position: center;
+    color: #eeeeee;
+    padding: 8rem 2rem;  /* Increased height by adjusting padding */
+    text-align: center;
+    margin-top: 4rem; /* Added margin to push content below the navbar */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    color: #00adb5;
+}
+
+.hero h3 {
+    font-weight: 400;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 2rem;
+    background: #fff;
+}
+
+.about .main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: #00adb5;
+}
+
+.about-text h5 {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #393e46;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-text button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #00adb5;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.about-text button:hover {
+    background: #008b95;
+}
+
+/* Skills */
+.skills {
+    background: #f1f1f1;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    color: #00adb5;
+    margin-bottom: 1.5rem;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skills-list li {
+    background: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+/* Services/Projects */
+.service {
+    background: #fff;
+    padding: 4rem 2rem;
+}
+
+.title h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00adb5;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.card {
+    background: #f9f9f9;
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 2rem;
+    color: #00adb5;
+    margin-bottom: 1rem;
+}
+
+.card h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #393e46;
+}
+
+.card .pra p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid #00adb5;
+    color: #00adb5;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: #00adb5;
+    color: #fff;
+}
+
+/* Contact Me */
+.contact-me {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.contact-me p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.button-two {
+    display: inline-block;
+    background: #00adb5;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.button-two:hover {
+    background: #008b95;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 4rem 2rem;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    color: #00adb5;
+    margin-bottom: 2rem;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.contact-form input[type="submit"] {
+    background: #00adb5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background: #008b95;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #eee;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer .social a {
+    color: #00adb5;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #fff;
+}
+
+footer .end {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
